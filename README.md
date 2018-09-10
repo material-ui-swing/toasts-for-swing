@@ -1,4 +1,4 @@
-# android-toasts-for-swing 
+# toasts-for-swing 
 [![](https://jitpack.io/v/vincenzopalazzo/android-toasts-for-swing.svg)](https://jitpack.io/#vincenzopalazzo/android-toasts-for-swing)
 
 # Support Componet Android For Swing
