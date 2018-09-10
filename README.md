@@ -1,5 +1,5 @@
 # toasts-for-swing 
-[![](https://jitpack.io/v/vincenzopalazzo/android-toasts-for-swing.svg)](https://jitpack.io/#vincenzopalazzo/android-toasts-for-swing)
+[![](https://jitpack.io/v/vincenzopalazzo/android-toasts-for-swing.svg)](https://jitpack.io/#vincenzopalazzo/android-toasts-for-swing) [![Build Status](https://travis-ci.org/vincenzopalazzo/toasts-for-swing.svg?branch=master)](https://travis-ci.org/vincenzopalazzo/toasts-for-swing)
 
 # Support Componet Android For Swing
 
