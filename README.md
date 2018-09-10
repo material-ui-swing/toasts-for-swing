@@ -1,7 +1,6 @@
 # toasts-for-swing 
 [![](https://jitpack.io/v/vincenzopalazzo/toasts-for-swing.svg)](https://jitpack.io/#vincenzopalazzo/toasts-for-swing)
- [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1331807f846447d1b149d96d74aca810)](https://app.codacy.com/app/vincenzopalazzo/toasts-for-swing?utm_source=github.com&utm_medium=referral&utm_content=vincenzopalazzo/toasts-for-swing&utm_campaign=Badge_Grade_Dashboard)
-[![](https://jitpack.io/v/vincenzopalazzo/android-toasts-for-swing.svg)](https://jitpack.io/#vincenzopalazzo/android-toasts-for-swing) [![Build Status](https://travis-ci.org/vincenzopalazzo/toasts-for-swing.svg?branch=master)](https://travis-ci.org/vincenzopalazzo/toasts-for-swing)
+ [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1331807f846447d1b149d96d74aca810)](https://app.codacy.com/app/vincenzopalazzo/toasts-for-swing?utm_source=github.com&utm_medium=referral&utm_content=vincenzopalazzo/toasts-for-swing&utm_campaign=Badge_Grade_Dashboard) [![Build Status](https://travis-ci.org/vincenzopalazzo/toasts-for-swing.svg?branch=master)](https://travis-ci.org/vincenzopalazzo/toasts-for-swing)
 
 # Support Componet Android For Swing
 
