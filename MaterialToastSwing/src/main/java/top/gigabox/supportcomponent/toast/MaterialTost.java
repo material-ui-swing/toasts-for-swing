@@ -49,8 +49,8 @@ public class MaterialTost extends JDialog {
     private final float OPACITY_INCREMENT = 0.05f;
     private final int FADE_REFRESH_RATE = 20;
     private final int WINDOW_RADIUS = 15;
-    private final int CHARACTER_LENGTH_MULTIPLIER = 10;
-    private final int DISTANCE_FROM_PARENT = 50;
+    private final int CHARACTER_LENGTH_MULTIPLIER = 8;
+    private final int DISTANCE_FROM_PARENT = 30;
 
     private JFrame mOwner;
     private String mText;
@@ -141,8 +141,8 @@ public class MaterialTost extends JDialog {
     private Point getToastLocation() {
         Point ownerLoc = mOwner.getLocation();
         if(mPosition == TOP){
-            int x = (int) (ownerLoc.getX() + ((mOwner.getWidth() - this.getWidth()) / 2));
-            int y = (int) (ownerLoc.getY());
+            int x = (int) (ownerLoc.getX() + ((mOwner.getWidth() - this.getWidth() ) / 2));
+            int y = (int) (ownerLoc.getY() + 30);
             return new Point(x, y);
         }
         int x = (int) (ownerLoc.getX() + ((mOwner.getWidth() - this.getWidth()) / 2));

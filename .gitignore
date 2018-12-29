@@ -1,0 +1,4 @@
+#dir project
+*.iml
+MaterialToastSwing/.idea/
+MaterialToastSwing/target/

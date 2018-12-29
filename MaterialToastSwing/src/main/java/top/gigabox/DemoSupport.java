@@ -3,6 +3,7 @@ package top.gigabox;
 import top.gigabox.supportcomponent.toast.MaterialTost;
 
 import javax.swing.*;
+import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -11,30 +12,43 @@ import java.awt.event.ActionEvent;
  *
  */
 public class DemoSupport{
+
     public static void main( String[] args ) {
-        final JFrame frame = new JFrame("Support Component android");
+        try {
+            UIManager.setLookAndFeel(new MetalLookAndFeel());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+        JFrame frame = new JFrame("Support Component android");
         JPanel panel = new JPanel();
 
         class ActionDemoToast extends AbstractAction{
 
-            public ActionDemoToast(){
+            JFrame component;
+
+            public ActionDemoToast(JFrame component){
+                this();
+                this.component = component;
+            }
+
+            private ActionDemoToast(){
                 putValue(Action.NAME, "Evanesco");
                 putValue(Action.SHORT_DESCRIPTION, "Demo Toast");
             }
 
             public void actionPerformed(ActionEvent e) {
                 //Static metod
-                MaterialTost.makeText(frame, "avada kedavra button", MaterialTost.NORMAL).display();
+                MaterialTost.makeText(component, "avada kedavra button", MaterialTost.NORMAL).display();
 
                 //Object metod
-                MaterialTost materialTost = MaterialTost.makeText(frame, "avada kedavra button", MaterialTost.LONG, MaterialTost.SUCCESS, MaterialTost.TOP);
+                MaterialTost materialTost = MaterialTost.makeText(component, "avada kedavra button", MaterialTost.LONG, MaterialTost.SUCCESS, MaterialTost.TOP);
                 materialTost.setForeground(Color.BLACK);
                 materialTost.display();
 
             }
         }
         JButton button = new JButton();
-        button.setAction(new ActionDemoToast());
+        button.setAction(new ActionDemoToast(frame));
         panel.add(button);
         frame.setContentPane(panel);
         frame.setSize(new Dimension(150, 150));

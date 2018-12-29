@@ -4,7 +4,7 @@
   <groupId>top.gigabox</groupId>
   <artifactId>MaterialToastSwing</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.5</version>
 
     <licenses>
         <license>
@@ -12,6 +12,15 @@
             <url>https://github.com/leMaik/swing-material/blob/master/LICENSE</url>
         </license>
     </licenses>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.vincenzopalazzo</groupId>
+            <artifactId>material-ui-swing</artifactId>
+            <version>v0.9.4.5</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
