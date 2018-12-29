@@ -1,0 +1,7 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+  - cd MaterialToastSwing
+script: mvn clean verify
+sudo: disable 
