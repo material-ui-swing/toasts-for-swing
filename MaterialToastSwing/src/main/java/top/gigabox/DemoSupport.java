@@ -1,6 +1,7 @@
 package top.gigabox;
 
-import top.gigabox.supportcomponent.toast.MaterialTost;
+import mdlaf.MaterialLookAndFeel;
+import top.gigabox.supportcomponent.toast.MaterialToast;
 
 import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
@@ -15,7 +16,8 @@ public class DemoSupport{
 
     public static void main( String[] args ) {
         try {
-            UIManager.setLookAndFeel(new MetalLookAndFeel());
+            UIManager.setLookAndFeel(new MaterialLookAndFeel());
+            JDialog.setDefaultLookAndFeelDecorated(true);
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
@@ -38,10 +40,10 @@ public class DemoSupport{
 
             public void actionPerformed(ActionEvent e) {
                 //Static metod
-                MaterialTost.makeText(component, "avada kedavra button", MaterialTost.NORMAL).display();
+                MaterialToast.makeText(component, "avada kedavra button", MaterialToast.NORMAL).display();
 
                 //Object metod
-                MaterialTost materialTost = MaterialTost.makeText(component, "avada kedavra button", MaterialTost.LONG, MaterialTost.SUCCESS, MaterialTost.TOP);
+                MaterialToast materialTost = MaterialToast.makeText(component, "avada kedavra button", MaterialToast.LONG, MaterialToast.SUCCESS, MaterialToast.TOP);
                 materialTost.setForeground(Color.BLACK);
                 materialTost.display();
 

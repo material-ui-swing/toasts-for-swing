@@ -14,7 +14,7 @@ import java.awt.geom.RoundRectangle2D;
  * @author https://github.com/vincenzopalazzo
  */
 
-public class MaterialTost extends JDialog {
+public class MaterialToast extends JDialog {
 
     /**
      * The Constant SHORT Set the shortest amount of time to display the toast
@@ -65,7 +65,7 @@ public class MaterialTost extends JDialog {
      *
      * @param owner is the instance JFrame
      */
-    public MaterialTost(JFrame owner) {
+    public MaterialToast(JFrame owner) {
         super(owner);
         mOwner = owner;
         label = new JLabel();
@@ -79,7 +79,7 @@ public class MaterialTost extends JDialog {
                 setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), WINDOW_RADIUS, WINDOW_RADIUS));
             }
         });
-
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
         setAlwaysOnTop(true);
         setUndecorated(true);
         setFocusableWindowState(false);
@@ -125,7 +125,7 @@ public class MaterialTost extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 opacity -= OPACITY_INCREMENT;
-//                setOpacity(Math.max(opacity, 0));
+               // setOpacity(Math.max(opacity, 0));
                 if (opacity <= 0) {
                     timer.stop();
                     setVisible(false);
@@ -134,7 +134,7 @@ public class MaterialTost extends JDialog {
             }
         });
 
-//        setOpacity(MAX_OPACITY);
+        //setOpacity(MAX_OPACITY);
         timer.start();
     }
 
@@ -165,7 +165,7 @@ public class MaterialTost extends JDialog {
      * @param text It indicates the text that must contain the Toast
      * @return MaterialToast where you can call show for viewing
      */
-    public static MaterialTost makeText(JFrame owner, String text) {
+    public static MaterialToast makeText(JFrame owner, String text) {
         return makeText(owner, text, SHORT, NORMAL, BOTTOM);
     }
 
@@ -176,7 +176,7 @@ public class MaterialTost extends JDialog {
      * @param style It indicates the color It is inidicate the color that must have the toast, using the constants that you find as the interface of the class
      * @return MaterialToast where you can call show for viewing
      */
-    public static MaterialTost makeText(JFrame owner, String text, Color style) {
+    public static MaterialToast makeText(JFrame owner, String text, Color style) {
         return makeText(owner, text, SHORT, style, BOTTOM);
     }
 
@@ -187,20 +187,20 @@ public class MaterialTost extends JDialog {
      * @param duration It indicates the duration of displaying the toast, using the constants that you find as the interface of the class
      * @return MaterialToast where you can call show for viewing
      */
-    public static MaterialTost makeText(JFrame owner, String text, int duration) {
+    public static MaterialToast makeText(JFrame owner, String text, int duration) {
         return makeText(owner, text, duration, NORMAL, BOTTOM);
     }
 
     /**
      *
-     * @param owner is the istance JFrame
+     * @param owner is the instance JFrame
      * @param text It indicates the text that must contain the Toast
-     * @param style It indicates the color It is inidicate the color that must have the toast, using the constants that you find as the interface of the class
+     * @param style It indicates the color It is indicate the color that must have the toast, using the constants that you find as the interface of the class
      * @param duration It indicates the duration of displaying the toast, using the constants that you find as the interface of the class
      * @return MaterialToast where you can call show for viewing
      * @throws IllegalArgumentException
      */
-    public static MaterialTost makeText(JFrame owner, String text, int duration, Color style, int position) {
+    public static MaterialToast makeText(JFrame owner, String text, int duration, Color style, int position) {
         if(text == null ){
             throw new IllegalArgumentException("Text is null");
         }
@@ -213,7 +213,7 @@ public class MaterialTost extends JDialog {
         if((duration != SHORT && duration != LONG)){
             throw new IllegalArgumentException("I do not support the duration you have entered");
         }
-        MaterialTost toast = new MaterialTost(owner);
+        MaterialToast toast = new MaterialToast(owner);
         toast.mText = text;
         toast.mDuration = duration;
         toast.mBackgroundColor = style;
